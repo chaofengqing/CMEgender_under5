@@ -1,0 +1,82 @@
+
+## Distribution of source types for Main.run and 
+## Validation.run (training and testing set)
+
+table(typename.i, source.i)
+## Main.run
+# source.i
+# typename.i          1    2    3    4    5    6    7    8
+# Census Indirect    90    0    0    0    0    0    0    0
+# DHS Direct          0 2307    0    0    0    0    0    0
+# MICS Direct         0    0  133    0    0    0    0    0
+# MICS Indirect       0    0    0  335    0    0    0    0
+# Other DHS Direct    0    0    0    0  558    0    0    0
+# Others Direct       0    0    0    0    0  303    0    0
+# Others Indirect     0    0    0    0    0    0  200    0
+# VR                  0    0    0    0    0    0    0 6158
+
+table(typename.i, source.i)
+## Validation.run (training set)
+# source.i
+# typename.i          1    2    4    5    6    7    8
+# Census Indirect    75    0    0    0    0    0    0
+# DHS Direct          0 1688    0    0    0    0    0
+# MICS Direct         0    0    0    0    0    0    0
+# MICS Indirect       0    0  183    0    0    0    0
+# Other DHS Direct    0    0    0  476    0    0    0
+# Others Direct       0    0    0    0  254    0    0
+# Others Indirect     0    0    0    0    0  148    0
+# VR                  0    0    0    0    0    0 5407
+
+table(typename.e, source.e)
+## Validation.run (testing set)
+# source.e
+# typename.e         1   2   3   4   5   6   7   8
+# Census Indirect   15   0   0   0   0   0   0   0
+# DHS Direct         0 619   0   0   0   0   0   0
+# MICS Direct        0   0 133   0   0   0   0   0
+# MICS Indirect      0   0   0 152   0   0   0   0
+# Other DHS Direct   0   0   0   0  82   0   0   0
+# Others Direct      0   0   0   0   0  49   0   0
+# Others Indirect    0   0   0   0   0   0  52   0
+# VR                 0   0   0   0   0   0   0 751
+
+
+table(typename.i, agecat.i)
+## Main.run
+# agecat.i
+# typename.i          1    4    5
+# Census Indirect     0    0   90
+# DHS Direct       1284 1023    0
+# MICS Direct        78   55    0
+# MICS Indirect       0    0  335
+# Other DHS Direct  293  265    0
+# Others Direct     151  152    0
+# Others Indirect     0    0  200
+# VR               3131 3015   12
+
+table(typename.i, agecat.i)
+## Validation.run (training set)
+# agecat.i
+# typename.i          1    4    5
+# Census Indirect     0    0   75
+# DHS Direct        941  747    0
+# MICS Direct         0    0    0
+# MICS Indirect       0    0  183
+# Other DHS Direct  251  225    0
+# Others Direct     126  128    0
+# Others Indirect     0    0  148
+# VR               2750 2651    6
+
+table(typename.e, agecat.e)
+## Validation.run (testing set)
+# agecat.e
+# typename.e         1   4   5
+# Census Indirect    0   0  15
+# DHS Direct       343 276   0
+# MICS Direct       78  55   0
+# MICS Indirect      0   0 152
+# Other DHS Direct  42  40   0
+# Others Direct     25  24   0
+# Others Indirect    0   0  52
+# VR               381 364   6

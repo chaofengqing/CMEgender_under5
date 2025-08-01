@@ -1,0 +1,1638 @@
+
+> ## Lancet Global Health appendix table ##
+> # Data source list of sex-specific child mortality data sources used in the model
+> # import fully clean .... [TRUNCATED] 
+
+> s.i <- database[, "Sex.Ratio"]
+
+> iso.i <- database[, "Country.Code"]
+
+> year.i <- database[, "Reference.Date"]
+
+> surveyID.i <- database[, "SourceID"]
+
+> surveyname.i <- database[, "Series.Name"]
+
+> typenameforplot.i <- database[, "typenameforplot.i"]
+
+> typename.s <- sort(unique(typenameforplot.i))
+
+> # clean series name
+> surveyname.i <- ifelse(surveyname.i == "GFH", surveyname.i, surveyname.i)
+
+> table.df <- NULL
+
+> colname.table <- c("Country", "Number of obs",
++                    "Most recent obs year", "Source")
+
+> for (c in 1:C) {
++   surveyID.c <- unique(surveyID.i)[grep(name.c[c], unique(surveyID.i))]
++   
++   if (length(surveyID.c) > 0) {
++     table.c <- m .... [TRUNCATED] 
+
+> row.names(table.df) <- gsub("%", "percent", row.names(table.df))
+
+> # the following commented out part includes additional info on source type!!
+> # table.df <- NULL
+> # 
+> # for (c in 1:C) {
+> #   surveyID.c <- uniq .... [TRUNCATED] 
+
+> # row.names(table.df)[c(124,125,126,150)]
+> print(table, tabular.environment = 'longtable', floating = FALSE,
++       include.colnames = FALSE, incl .... [TRUNCATED] 
+% latex table generated in R 2.15.0 by xtable 1.7-1 package
+% Wed Jun 18 13:55:42 2014
+{\tiny
+\begin{longtable}{|p{3cm}||p{1cm}|p{1.5cm}|p{8cm}|}
+   \hline
+Afghanistan & 18 & 2008.5 &  \\ 
+   \hline
+ & 4 & 1969.4 & 1972 National Demographic and Family Guidance Survey (Others Indirect) \\ 
+   \hline
+ & 1 & 2004.3 & 2007-2008 National Risk and Vulnerability Assessment Survey (Others Indirect) \\ 
+   \hline
+ & 13 & 2008.5 & 2010 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Albania & 21 & 2005.5 &  \\ 
+   \hline
+ & 5 & 1996.9 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 2 & 2000 & 2002 Rhs-cdc (Others Direct) \\ 
+   \hline
+ & 5 & 2002.8 & 2005 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 9 & 2005.5 & 2008-2009 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Algeria & 40 & 2002.9 &  \\ 
+   \hline
+ & 2 & 1976.5 & 1986 Enquete nationale sur la fecondite (Others Direct) \\ 
+   \hline
+ & 6 & 1989.5 & 1992 Enquete Algerienne sur la Sante de la Mere/Enfant (Others Direct) \\ 
+   \hline
+ & 2 & 1993 & 1995 Enquete nationale sur les objectifs (Others Direct) \\ 
+   \hline
+ & 1 & 1993.8 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 10 & 2000 & 2002 PAPFAM Family Health Survey (Others Direct) \\ 
+   \hline
+ & 5 & 2002.9 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 14 & 2000.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Andorra &  &  &  \\ 
+   \hline
+Angola & 16 & 2003.7 &  \\ 
+   \hline
+ & 5 & 1992 & 1996 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 1997 & 2001 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2002.7 & 2006 Malaria Indicator Survey (Other DHS Indirect) \\ 
+   \hline
+ & 1 & 2003.7 & 2008-2009 Household Incomes and Expenditures Survey IBEP (Others Indirect) \\ 
+   \hline
+Antigua and Barbuda & 29 & 2009.5 &  \\ 
+   \hline
+ & 29 & 2009.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Argentina & 72 & 2010.5 &  \\ 
+   \hline
+ & 72 & 2010.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Armenia & 28 & 2007.5 &  \\ 
+   \hline
+ & 10 & 1997.5 & 2000 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 10 & 2002.5 & 2005 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 8 & 2007.5 & 2010 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Australia & 124 & 2011.5 &  \\ 
+   \hline
+ & 124 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Austria & 114 & 2011.5 &  \\ 
+   \hline
+ & 114 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Azerbaijan & 40 & 2010 &  \\ 
+   \hline
+ & 5 & 1996.8 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 2 & 1996 & 2001 Reproductive Health Survey (Others Direct) \\ 
+   \hline
+ & 10 & 2003.5 & 2006 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 23 & 2010 & 2011 Demographic and Health Survey (Other DHS Direct) \\ 
+   \hline
+Bahamas & 74 & 2008.5 &  \\ 
+   \hline
+ & 74 & 2008.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Bahrain & 62 & 2009.5 &  \\ 
+   \hline
+ & 2 & 1984 & 1989 Child Health Survey (Others Direct) \\ 
+   \hline
+ & 2 & 1990.5 & 1995 GFH (Others Direct) \\ 
+   \hline
+ & 58 & 2009.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Bangladesh & 153 & 2011.5 &  \\ 
+   \hline
+ & 5 & 1970.1 & 1974 Retrospective Fertility and Mortality Survey (UN SA) (Others Indirect) \\ 
+   \hline
+ & 10 & 1973 & 1975-1976 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 2 & 1981 & 1988-1989 Fertility Survey (Others Direct) \\ 
+   \hline
+ & 12 & 1991 & 1993-1994 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1994 & 1996-1997 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1996.5 & 1999-2000 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 2 & 1999 & 2001 Maternal Health Services and Maternal Mortality Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 2001.5 & 2004 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2004.5 & 2007 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 2005.1 & 2009 Multiple Indicator Cluster Survey (Others Indirect) \\ 
+   \hline
+ & 11 & 2008.5 & 2011 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 1 & 2010.7 & 2011 Census (Census Direct) \\ 
+   \hline
+ & 61 & 2011.5 & 2012 SVR from Report on Sample Vital Registration System 2010 (SRS) \\ 
+   \hline
+Barbados & 103 & 2008.5 &  \\ 
+   \hline
+ & 103 & 2008.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Belarus & 60 & 2011.5 &  \\ 
+   \hline
+ & 60 & 2011.5 & 2013 WHO VR 2013 adjusted version by increasing 10 percent (VR) \\ 
+   \hline
+Belgium & 114 & 2010.5 &  \\ 
+   \hline
+ & 114 & 2010.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Belize & 25 & 2009.5 &  \\ 
+   \hline
+ & 5 & 2002 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 20 & 2009.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Benin & 46 & 2004.5 &  \\ 
+   \hline
+ & 11 & 1979 & 1981-1982 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1994 & 1996 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1998.5 & 2001 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 13 & 2004.5 & 2006 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Bhutan & 16 & 2006.2 &  \\ 
+   \hline
+ & 5 & 1980.6 & 1984 Demographic Sample Survey (Others Indirect) \\ 
+   \hline
+ & 2 & 1983.5 & 1984 Demographic Sample Survey (Others Direct) \\ 
+   \hline
+ & 2 & 1993.5 & 1994 National Health Survey (Others Direct) \\ 
+   \hline
+ & 2 & 1999.7 & 2000 National Health Survey (Others Direct) \\ 
+   \hline
+ & 5 & 2006.2 & 2010 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Bolivia (Plurinational State of) & 70 & 2005.5 &  \\ 
+   \hline
+ & 5 & 1972 & 1975 EDEN (Others Indirect) \\ 
+   \hline
+ & 5 & 1976.9 & 1980 EDEN (Others Indirect) \\ 
+   \hline
+ & 11 & 1986.5 & 1989 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1990.5 & 1993-1994 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1995.5 & 1998 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1996.4 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 11 & 2000.5 & 2003-2004 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2005.5 & 2008 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Bosnia and Herzegovina & 42 & 2011.5 &  \\ 
+   \hline
+ & 42 & 2011.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Botswana & 21 & 2002 &  \\ 
+   \hline
+ & 11 & 1985.5 & 1988 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1996 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2002 & 2006 Demographic Survey (Others Indirect) \\ 
+   \hline
+Brazil & 22 & 1993.5 &  \\ 
+   \hline
+ & 11 & 1983.5 & 1986 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1993.5 & 1996 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Brunei & 54 & 2010.5 &  \\ 
+   \hline
+ & 54 & 2010.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Bulgaria & 96 & 2011.5 &  \\ 
+   \hline
+ & 96 & 2011.5 & 2013 WHO Good VR 2013 adjusted version by increasing 20 percent (VR) \\ 
+   \hline
+Burkina Faso & 46 & 2008.5 &  \\ 
+   \hline
+ & 11 & 1989.5 & 1992-1993 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1996.5 & 1998-1999 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2000.5 & 2003 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 13 & 2008.5 & 2010 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Burundi & 34 & 2007.5 &  \\ 
+   \hline
+ & 2 & 1970.5 & 1970 Demographic Survey (Others Direct) \\ 
+   \hline
+ & 11 & 1984.5 & 1987 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1996.7 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2002.5 & 2005 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 11 & 2007.5 & 2010 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Cambodia & 42 & 2007.5 &  \\ 
+   \hline
+ & 5 & 1994.3 & 1998 Census (Census Indirect) \\ 
+   \hline
+ & 12 & 1998.5 & 2000 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 3 & 2002.2 & 2004 Inter-censal Population Survey (Others Indirect) \\ 
+   \hline
+ & 11 & 2002.5 & 2005-2006 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2007.5 & 2010-2011 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Cameroon & 59 & 2008.5 &  \\ 
+   \hline
+ & 10 & 1975.5 & 1978 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1988.5 & 1991 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1995.5 & 1998 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1996.1 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 11 & 2002 & 2004 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2008.5 & 2011 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Canada & 120 & 2009.5 &  \\ 
+   \hline
+ & 120 & 2009.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Cape Verde & 2 & 1993.5 &  \\ 
+   \hline
+ & 2 & 1993.5 & 1998 DRHS (Others Direct) \\ 
+   \hline
+Central African Republic & 26 & 2005.6 &  \\ 
+   \hline
+ & 11 & 1991.5 & 1994-1995 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1995.9 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2001.4 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2005.6 & 2010 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Chad & 36 & 2008.8 &  \\ 
+   \hline
+ & 12 & 1994.5 & 1996-1997 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1996.2 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 11 & 2001.5 & 2004 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 8 & 2008.8 & 2010 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Chile & 100 & 2009.5 &  \\ 
+   \hline
+ & 100 & 2009.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+China & 23 & 2011 &  \\ 
+   \hline
+ & 1 & 1986 & 1987 Population Sample Survey (Others Indirect) \\ 
+   \hline
+ & 10 & 1986 & 1988 National Survey on Fertility and Birth Control (Others Direct) \\ 
+   \hline
+ & 12 & 2011 & 2012 Sample Vital Registration (SRS) \\ 
+   \hline
+Colombia & 65 & 2006.5 &  \\ 
+   \hline
+ & 10 & 1983.5 & 1986 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1987.5 & 1990 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1992.5 & 1995 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1997.5 & 2000 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2001.5 & 2004-2005 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2006.5 & 2009-2010 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Comoros & 10 & 1993.5 &  \\ 
+   \hline
+ & 10 & 1993.5 & 1996 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Congo & 16 & 2004.9 &  \\ 
+   \hline
+ & 5 & 1997.3 & 2001 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 11 & 2002.5 & 2005 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2004.5 & 2007 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 2004.9 & 2009 AIDS Indicator Survey (Other DHS Indirect) \\ 
+   \hline
+ & 5 & 2005.8 & 2010 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Democratic Republic of the Congo & 21 & 2005.8 &  \\ 
+   \hline
+ & 5 & 1997.3 & 2001 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 11 & 2004.5 & 2007 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 2005.8 & 2010 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Cook Islands & 38 & 2009.5 &  \\ 
+   \hline
+ & 5 & 2002.7 & 2006 Census (Census Indirect) \\ 
+   \hline
+ & 33 & 2009.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Costa Rica & 90 & 2010.5 &  \\ 
+   \hline
+ & 90 & 2010.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Cote d'Ivoire & 45 & 2002.5 &  \\ 
+   \hline
+ & 2 & 1978.5 & 1978 Demographic Survey Repeated Passages (Others Direct) \\ 
+   \hline
+ & 11 & 1978.5 & 1980-1981 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1992 & 1994 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1995.5 & 1998-1999 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 10 & 2002.5 & 2005 AIDS Indicator Survey (Other DHS Direct) \\ 
+   \hline
+Croatia & 60 & 2011.5 &  \\ 
+   \hline
+ & 60 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Cuba & 90 & 2010.5 &  \\ 
+   \hline
+ & 90 & 2010.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Cyprus & 64 & 2011.5 &  \\ 
+   \hline
+ & 64 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Czech Republic & 58 & 2011.5 &  \\ 
+   \hline
+ & 58 & 2011.5 & 2013 WHO Good VR 2013 adjusted version by increasing 20 percent (VR) \\ 
+   \hline
+Denmark & 122 & 2011.5 &  \\ 
+   \hline
+ & 122 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Djibouti & 9 & 2003.4 &  \\ 
+   \hline
+ & 4 & 2001.5 & 2002 PAPFAM Family Health Survey (Others Direct) \\ 
+   \hline
+ & 5 & 2003.4 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Dominica & 80 & 2010.5 &  \\ 
+   \hline
+ & 10 & 1972.5 & 1975 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1983.5 & 1986 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1988.5 & 1991 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1993.5 & 1996 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1996.3 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 11 & 1999.5 & 2002 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 16 & 2004.5 & 2007 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 80 & 2010.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Dominican Republic & 75 & 2004.5 &  \\ 
+   \hline
+ & 10 & 1972.5 & 1975 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1983.5 & 1986 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1988.5 & 1991 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1993.5 & 1996 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1996.3 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 11 & 1999.5 & 2002 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 16 & 2004.5 & 2007 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Ecuador & 25 & 1997 &  \\ 
+   \hline
+ & 10 & 1976.5 & 1979-1980 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1984.5 & 1987 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 2 & 1984 & 1989 Encuesta Demografica y de Salud Materna e Infantil (ENDEMAIN) (Others Direct) \\ 
+   \hline
+ & 2 & 1997 & 1999 Encuesta Demografica y de Salud Materna e Infantil (ENDEMAIN) (Others Direct) \\ 
+   \hline
+Egypt & 110 & 2011.5 &  \\ 
+   \hline
+ & 16 & 1979 & 1980 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 12 & 1986 & 1988-1989 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 4 & 1986.5 & 1991 PAPCHILD Maternal and Child Health Survey (Others Direct) \\ 
+   \hline
+ & 11 & 1989.5 & 1992-1993 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 12 & 1993 & 1995-1996 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 2 & 1993 & 1997 Interim Demographic and Health Survey (Other DHS Direct) \\ 
+   \hline
+ & 2 & 1994 & 1998 Interim Demographic and Health Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1997.5 & 2000 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 10 & 2000.5 & 2003 Demographic and Health Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 2002.5 & 2005 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2005.5 & 2008 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 8 & 2011.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+El Salvador & 9 & 1999.5 &  \\ 
+   \hline
+ & 5 & 1980.9 & 1985 Demographic and Health Survey (DHS Indirect) \\ 
+   \hline
+ & 2 & 1985.5 & 1988 Encuesta Nacional de Salud Familiar (FESAL) (Others Direct) \\ 
+   \hline
+ & 2 & 1999.5 & 2002-2003 Encuesta Nacional de Salud Familiar (FESAL) (Others Direct) \\ 
+   \hline
+Equatorial Guinea & 5 & 1996 &  \\ 
+   \hline
+ & 5 & 1996 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Eritrea & 21 & 1999.5 &  \\ 
+   \hline
+ & 10 & 1992.5 & 1995-1996 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1999.5 & 2002 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Estonia & 62 & 2011.5 &  \\ 
+   \hline
+ & 62 & 2011.5 & 2013 WHO Good VR 2013 adjusted version by increasing 20 percent before 1992 (VR) \\ 
+   \hline
+Ethiopia & 36 & 2007.5 &  \\ 
+   \hline
+ & 2 & 1977.7 & 1981 Demographic Survey (Others Indirect) \\ 
+   \hline
+ & 12 & 1998.5 & 2000 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2002.5 & 2005 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2007.5 & 2011 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Federated States of Micronesia &  &  &  \\ 
+   \hline
+Fiji & 16 & 2009.5 &  \\ 
+   \hline
+ & 10 & 1971.5 & 1974 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 6 & 2009.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Finland & 120 & 2011.5 &  \\ 
+   \hline
+ & 120 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+France & 124 & 2011.5 &  \\ 
+   \hline
+ & 124 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Gabon & 18 & 2009.5 &  \\ 
+   \hline
+ & 8 & 1997.5 & 2000-2001 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 10 & 2009.5 & 2012 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+The Gambia & 10 & 2002 &  \\ 
+   \hline
+ & 5 & 1996 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2002 & 2005-2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Georgia & 9 & 2001.8 &  \\ 
+   \hline
+ & 2 & 1995 & 1999-2000 Reproductive Health Survey (Others Direct) \\ 
+   \hline
+ & 5 & 2001.8 & 2005 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 2 & 2000 & 2005 RHS (Others Direct) \\ 
+   \hline
+Germany & 84 & 2011.5 &  \\ 
+   \hline
+ & 84 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Ghana & 64 & 2006.8 &  \\ 
+   \hline
+ & 11 & 1985.5 & 1988 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1990.5 & 1993-1994 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1995.5 & 1998-1999 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2000.5 & 2003 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 2002.8 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 2 & 2002 & 2007 Maternal Health Survey Final (Other DHS Direct) \\ 
+   \hline
+ & 11 & 2005.5 & 2008 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 2 & 2006.8 & 2011 Multiple Indicator Cluster Survey (MICS Direct) \\ 
+   \hline
+Greece & 112 & 2011.5 &  \\ 
+   \hline
+ & 112 & 2011.5 & 2013 WHO Good VR 2013 adjusted version by increasing 20 percent (VR) \\ 
+   \hline
+Grenada & 44 & 2010.5 &  \\ 
+   \hline
+ & 44 & 2010.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Guatemala & 42 & 1995.5 &  \\ 
+   \hline
+ & 11 & 1984.5 & 1987 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1982.9 & 1987 Enc. Nacional SocioDemografica (Others Indirect) \\ 
+   \hline
+ & 5 & 1985.1 & 1989 Enc. Nacional Sociodemografica (Others Indirect) \\ 
+   \hline
+ & 11 & 1992.5 & 1995 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 10 & 1995.5 & 1998-1999 Demographic and Health Survey (Other DHS Direct) \\ 
+   \hline
+Guinea & 33 & 2002.5 &  \\ 
+   \hline
+ & 5 & 1992.3 & 1996 Census (Census Indirect) \\ 
+   \hline
+ & 12 & 1997.5 & 1999 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1996 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 1995.7 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 1999 & 2003 Multiple Indicator Cluster Survey (Others Indirect) \\ 
+   \hline
+ & 11 & 2002.5 & 2005 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 2001.9 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 13 & 2007.5 & 2010 Multiple Indicator Cluster Survey (MICS Direct) \\ 
+   \hline
+Guinea-Bissau & 23 & 2007.5 &  \\ 
+   \hline
+ & 5 & 1995.7 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2001.9 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 13 & 2007.5 & 2010 Multiple Indicator Cluster Survey (MICS Direct) \\ 
+   \hline
+Guyana & 39 & 2006.5 &  \\ 
+   \hline
+ & 10 & 1972.5 & 1975 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 5 & 1996.4 & 2000-2001 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 9 & 2002.5 & 2005 AIDS Indicator Survey (Other DHS Direct) \\ 
+   \hline
+ & 5 & 2002 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 10 & 2006.5 & 2009 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Haiti & 53 & 2009.5 &  \\ 
+   \hline
+ & 8 & 1974.5 & 1977 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 2 & 1984.5 & 1987 EMMUS (Others Direct) \\ 
+   \hline
+ & 11 & 1991.5 & 1994-1995 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1997.5 & 2000 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2002.5 & 2005-2006 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 10 & 2009.5 & 2012 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Honduras & 22 & 2002.5 &  \\ 
+   \hline
+ & 2 & 1971.5 & 1972 National Demographic Survey (Others Direct) \\ 
+   \hline
+ & 5 & 1979.4 & 1983 National Demographic Survey (Others Indirect) \\ 
+   \hline
+ & 4 & 1979 & 1987 Encuesta Nacional de Epidemiologia y Salud Familiar (ENESF) (Others Direct) \\ 
+   \hline
+ & 11 & 2002.5 & 2005-2006 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Hungary & 114 & 2011.5 &  \\ 
+   \hline
+ & 114 & 2011.5 & 2013 WHO Good VR 2013 adjusted version by increasing 10 percent (VR) \\ 
+   \hline
+Iceland & 114 & 2011.5 &  \\ 
+   \hline
+ & 114 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+India & 156 & 2011.5 &  \\ 
+   \hline
+ & 36 & 1989.5 & 1989 Sample Registration System (SRS) \\ 
+   \hline
+ & 28 & 1991.5 & 1992-1993 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 18 & 1997 & 1998-1999 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 4 & 1994.5 & 1999 District Level Household Survey (Others Indirect) \\ 
+   \hline
+ & 4 & 1999.3 & 2004 District Level Household Survey (Others Indirect) \\ 
+   \hline
+ & 18 & 2004 & 2005-2006 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 2003.6 & 2008 District Level Household Survey (Others Indirect) \\ 
+   \hline
+ & 43 & 2011.5 & 2011 Sample Registration System (SRS) \\ 
+   \hline
+Indonesia & 87 & 2006.4 &  \\ 
+   \hline
+ & 11 & 1974 & 1976 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1985 & 1987 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1986.9 & 1990 Census (Census Indirect) \\ 
+   \hline
+ & 11 & 1989.5 & 1991 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1991.5 & 1994 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1994.5 & 1997 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1999.5 & 2002-2003 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2004.5 & 2007 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 2006.4 & 2010 Census (Census Indirect) \\ 
+   \hline
+Iran (Islamic Republic of) & 77 & 2008.5 &  \\ 
+   \hline
+ & 2 & 1974.5 & 1973-1976 Population Growth Survey (Others Direct) \\ 
+   \hline
+ & 68 & 2000 & 2000 Demographic and Health Survey (Other DHS Direct) \\ 
+   \hline
+ & 5 & 2003.1 & 2006 Census (Census Indirect) \\ 
+   \hline
+ & 2 & 2008.5 & 2010 National Multiple-Indicator Demographic and Health Survey (Other DHS Direct) \\ 
+   \hline
+Iraq & 28 & 2008.5 &  \\ 
+   \hline
+ & 2 & 1973.5 & 1973 Demographic Sample Survey and Sample Registration System (Others Direct) \\ 
+   \hline
+ & 5 & 1986 & 1990 Immunization, Diarrhoeal Disease, Maternal and Child Mortality Survey (Others Indirect) \\ 
+   \hline
+ & 6 & 2001 & 2004 Living Conditions Survey (Others Direct) \\ 
+   \hline
+ & 13 & 2003.5 & 2006 Multiple Indicator Cluster Survey (MICS Direct) \\ 
+   \hline
+ & 2 & 2008.5 & 2011 Multiple Indicator Cluster Survey (MICS Direct) \\ 
+   \hline
+Ireland & 124 & 2011.5 &  \\ 
+   \hline
+ & 124 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Israel & 74 & 2011.5 &  \\ 
+   \hline
+ & 74 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Italy & 120 & 2010.5 &  \\ 
+   \hline
+ & 120 & 2010.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Jamaica & 17 & 2003 &  \\ 
+   \hline
+ & 10 & 1972.5 & 1975-1976 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 5 & 2001.4 & 2005 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 2 & 2003 & 2008-2009 Reproductive Health Survey (Others Direct) \\ 
+   \hline
+Japan & 124 & 2011.5 &  \\ 
+   \hline
+ & 124 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Jordan & 74 & 2004.5 &  \\ 
+   \hline
+ & 5 & 1970.9 & 1972 Jordan Fertility Survey (Others Indirect) \\ 
+   \hline
+ & 10 & 1973.5 & 1976 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 5 & 1978.5 & 1981 Jordan Demographic Survey (Others Indirect) \\ 
+   \hline
+ & 5 & 1984.9 & 1988 EPI-CDD and Child Mortality Survey (Others Indirect) \\ 
+   \hline
+ & 11 & 1987.5 & 1990 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1987.5 & 1990 EPI-CDD and Child Mortality Survey (Others Indirect) \\ 
+   \hline
+ & 11 & 1994.5 & 1997 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1999.5 & 2002 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2004.5 & 2007 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Kazakhstan & 30 & 2007.4 &  \\ 
+   \hline
+ & 9 & 1992.5 & 1995 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1996.5 & 1999 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 2002.4 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2007.4 & 2010-2011 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Kenya & 81 & 2005.5 &  \\ 
+   \hline
+ & 11 & 1976 & 1977-1978 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1985.5 & 1988-1989 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1985.2 & 1989 Census (Census Indirect) \\ 
+   \hline
+ & 11 & 1990.5 & 1993 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1995.5 & 1998 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1995.2 & 1999 Census (Census Indirect) \\ 
+   \hline
+ & 5 & 1996.2 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 11 & 2000.5 & 2003 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2005.5 & 2008-2009 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Kiribati &  &  &  \\ 
+   \hline
+Democratic People's Republic of Korea &  &  &  \\ 
+   \hline
+Republic of Korea & 70 & 2011.5 &  \\ 
+   \hline
+ & 10 & 1971.5 & 1974 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 60 & 2011.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Kuwait & 77 & 2011.5 &  \\ 
+   \hline
+ & 5 & 1987 & 1987 Child Health Survey (Others Indirect) \\ 
+   \hline
+ & 72 & 2011.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Kyrgyzstan & 15 & 2002.5 &  \\ 
+   \hline
+ & 10 & 1994.5 & 1997 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 2002.5 & 2005-2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Lao People's Democratic Republic & 2 & 1989.5 &  \\ 
+   \hline
+ & 2 & 1989.5 & 1994 Fertility and Birth Spacing Survey (Others Direct) \\ 
+   \hline
+Latvia & 64 & 2011.5 &  \\ 
+   \hline
+ & 64 & 2011.5 & 2013 WHO Good VR 2013 adjusted version by increasing 20 percent (VR) \\ 
+   \hline
+Lebanon & 20 & 2006.6 &  \\ 
+   \hline
+ & 5 & 1992.9 & 1996 Population and Housing Survey (Others Indirect) \\ 
+   \hline
+ & 1 & 1996.6 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 9 & 2002 & 2004 PAPFAM Family Health Survey (Others Direct) \\ 
+   \hline
+ & 5 & 2006.6 & 2009 Multiple Indicator Cluster Survey (Others Indirect) \\ 
+   \hline
+Lesotho & 43 & 2006.5 &  \\ 
+   \hline
+ & 5 & 1967.5 & 1971 lds (Others Indirect) \\ 
+   \hline
+ & 10 & 1974.5 & 1977 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 5 & 1995.8 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 1 & 1996.1 & 2001 ds (Others Indirect) \\ 
+   \hline
+ & 11 & 2001.5 & 2004-2005 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2006.5 & 2009-2010 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Liberia & 37 & 2006.9 &  \\ 
+   \hline
+ & 11 & 1984 & 1986 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2003.5 & 2006-2007 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 10 & 2005.5 & 2009 Malaria Indicator Survey (Other DHS Direct) \\ 
+   \hline
+ & 5 & 2006.9 & 2011 Malaria Indicator Survey (Other DHS Indirect) \\ 
+   \hline
+Libya & 12 & 2005 &  \\ 
+   \hline
+ & 2 & 1990 & 1995 PAPCHILD Maternal and Child Health Survey (Others Direct) \\ 
+   \hline
+ & 10 & 2005 & 2007 PAPFAM Family Health Survey (Others Direct) \\ 
+   \hline
+Lithuania & 88 & 2011.5 &  \\ 
+   \hline
+ & 88 & 2011.5 & 2013 WHO Good VR 2013 adjusted version by increasing 10 percent (VR) \\ 
+   \hline
+Luxembourg & 91 & 2011.5 &  \\ 
+   \hline
+ & 91 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Macedonia & 60 & 2011.5 &  \\ 
+   \hline
+ & 60 & 2011.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Madagascar & 48 & 2005.5 &  \\ 
+   \hline
+ & 10 & 1989.5 & 1992 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1995 & 1997 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1995.8 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 11 & 2000.5 & 2003-2004 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2005.5 & 2008-2009 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Malawi & 86 & 2007.5 &  \\ 
+   \hline
+ & 2 & 1971 & 1970 pcs (Others Direct) \\ 
+   \hline
+ & 5 & 1978.4 & 1982 mds (Others Indirect) \\ 
+   \hline
+ & 2 & 1983.5 & 1984 ffs (Others Direct) \\ 
+   \hline
+ & 5 & 1982.5 & 1987 Census (Census Indirect) \\ 
+   \hline
+ & 11 & 1989.5 & 1992 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1994 & 1998 Census (Census Indirect) \\ 
+   \hline
+ & 13 & 1999 & 2000 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2001.5 & 2004-2005 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 16 & 2005 & 2006 Multiple Indicator Cluster Survey (MICS Direct) \\ 
+   \hline
+ & 16 & 2007.5 & 2010 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Malaysia &  &  &  \\ 
+   \hline
+Maldives & 25 & 2011.5 &  \\ 
+   \hline
+ & 2 & 1998 & 1997 Poverty and Vulnerability Survey (Others Indirect) \\ 
+   \hline
+ & 11 & 2006.5 & 2009 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 12 & 2011.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Mali & 55 & 2004.5 &  \\ 
+   \hline
+ & 10 & 1984.5 & 1987 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 16 & 1994 & 1995-1996 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 16 & 2000 & 2001 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 13 & 2004.5 & 2006 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Malta & 107 & 2011.5 &  \\ 
+   \hline
+ & 107 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Marshall Islands & 1 & 2010.8 &  \\ 
+   \hline
+ & 1 & 2010.8 & 2011 Census (Census Direct) \\ 
+   \hline
+Mauritania & 33 & 2003.4 &  \\ 
+   \hline
+ & 11 & 1979 & 1981-1982 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 6 & 1985 & 1990 MCHS (Others Direct) \\ 
+   \hline
+ & 11 & 1997.5 & 2000-2001 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 2003.4 & 2007 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Mauritius & 110 & 2011.5 &  \\ 
+   \hline
+ & 110 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Mexico & 23 & 2010.5 &  \\ 
+   \hline
+ & 11 & 1984.5 & 1987 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 12 & 2010.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Republic of Moldova & 11 & 2002.5 &  \\ 
+   \hline
+ & 11 & 2002.5 & 2005 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Monaco &  &  &  \\ 
+   \hline
+Mongolia & 27 & 2007.1 &  \\ 
+   \hline
+ & 2 & 1993 & 1998 Reproductive Health Survey (Others Direct) \\ 
+   \hline
+ & 5 & 1996.1 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 1999.5 & 2003 Reproductive Health Survey (Others Indirect) \\ 
+   \hline
+ & 5 & 2001.7 & 2005 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2004.5 & 2008 Reproductive Health Survey (Others Indirect) \\ 
+   \hline
+ & 5 & 2007.1 & 2010 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Montenegro & 53 & 2011.5 &  \\ 
+   \hline
+ & 53 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Morocco & 66 & 2000.5 &  \\ 
+   \hline
+ & 10 & 1977.5 & 1980 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1985 & 1987 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1989.5 & 1992 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1992.5 & 1995 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 2 & 1994.5 & 1997 PAPG ENSME petit-echantillon 1997 (Others Direct) \\ 
+   \hline
+ & 11 & 2000.5 & 2003-2004 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 10 & 2000.5 & 2003-2004 PAPFAM Family Health Survey (Others Direct) \\ 
+   \hline
+Mozambique & 47 & 2008.5 &  \\ 
+   \hline
+ & 13 & 2001.5 & 2003-2004 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 19 & 2006.5 & 2008 Multiple Indicator Cluster Survey (MICS Direct) \\ 
+   \hline
+ & 5 & 2005.1 & 2009 AIDS Indicator Survey (Other DHS Indirect) \\ 
+   \hline
+ & 10 & 2008.5 & 2011 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Myanmar & 10 & 2001 &  \\ 
+   \hline
+ & 4 & 1985.5 & 1991 Population Change and Fertility Survey (Others Direct) \\ 
+   \hline
+ & 2 & 1992 & 1997 Fertility and Reproductive Health Survey (Others Direct) \\ 
+   \hline
+ & 2 & 1996 & 2001 Fertility and Reproductive Health Survey (Others Direct) \\ 
+   \hline
+ & 2 & 2001 & 2007 Fertility and Reproductive Health Survey (Others Direct) \\ 
+   \hline
+Namibia & 32 & 2003.5 &  \\ 
+   \hline
+ & 10 & 1989.5 & 1992 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1997.5 & 2000 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2003.5 & 2006-2007 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Nauru &  &  &  \\ 
+   \hline
+Nepal & 59 & 2008.5 &  \\ 
+   \hline
+ & 12 & 1974.5 & 1976 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 2 & 1986 & 1991 Fertility and Family Planning Survey (Others Direct) \\ 
+   \hline
+ & 12 & 1994 & 1996 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1998.5 & 2001 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2003.5 & 2006 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2008.5 & 2011 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Netherlands & 124 & 2011.5 &  \\ 
+   \hline
+ & 124 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+New Zealand & 122 & 2010.5 &  \\ 
+   \hline
+ & 122 & 2010.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Nicaragua & 38 & 2004 &  \\ 
+   \hline
+ & 5 & 1981.3 & 1985 Enc.Socio-Demografica Nicaraguense (Others Indirect) \\ 
+   \hline
+ & 5 & 1990.3 & 1995 Census (Census Indirect) \\ 
+   \hline
+ & 11 & 1994.5 & 1997-1998 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1998.5 & 2001 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 2000.5 & 2005 Census (Census Indirect) \\ 
+   \hline
+ & 1 & 2004 & 2006 Demographic and Health Survey (Other DHS Direct) \\ 
+   \hline
+Niger & 46 & 2007.5 &  \\ 
+   \hline
+ & 11 & 1987.5 & 1990 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1990.5 & 1992 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 13 & 1996.5 & 1998 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1995.8 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 11 & 2000.5 & 2003 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2004 & 2006 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 22 & 2007.5 & 2008 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 6 & 2007.5 & 2010 Child Survival and Mortality Survey New (Others Direct) \\ 
+   \hline
+ & 10 & 2007.5 & 2010 Malaria Indicator Survey (Other DHS Direct) \\ 
+   \hline
+Nigeria & 54 & 2007.5 &  \\ 
+   \hline
+ & 11 & 1987.5 & 1990 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2000.5 & 2003 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 22 & 2007.5 & 2008 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 10 & 2007.5 & 2010 Malaria Indicator Survey (Other DHS Direct) \\ 
+   \hline
+Niue & 2 & 2002.5 &  \\ 
+   \hline
+ & 2 & 2002.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Norway & 122 & 2011.5 &  \\ 
+   \hline
+ & 122 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Oman & 8 & 1990 &  \\ 
+   \hline
+ & 6 & 1983.5 & 1988 Child Health Survey (Others Direct) \\ 
+   \hline
+ & 2 & 1990 & 1995 Family Health Survey (Others Direct) \\ 
+   \hline
+Pakistan & 115 & 2007.5 &  \\ 
+   \hline
+ & 2 & 1964 & 1962-1965 Population Growth Estimation Experiment (VR) \\ 
+   \hline
+ & 2 & 1969.5 & 1971 Population Growth Survey I (Others Direct) \\ 
+   \hline
+ & 11 & 1973.5 & 1975 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 2 & 1977 & 1976-1978 Population Growth Survey II (Others Direct) \\ 
+   \hline
+ & 2 & 1986 & 1988 Demographic Survey (Others Direct) \\ 
+   \hline
+ & 11 & 1987.5 & 1990-1991 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1992 & 1996 Integrated Household Survey (Others Indirect) \\ 
+   \hline
+ & 5 & 1993.2 & 1998 Census (Census Indirect) \\ 
+   \hline
+ & 11 & 1995.5 & 1998 Integrated Household Survey (Others Direct) \\ 
+   \hline
+ & 2 & 1999 & 2000-2001 Reproductive Health and Family Planning Survey (Others Direct) \\ 
+   \hline
+ & 11 & 1997.5 & 2001 Integrated Household Survey (Others Direct) \\ 
+   \hline
+ & 11 & 2004 & 2006-2007 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 34 & 2003.5 & 2008 Pakistan Demographic Survey (VR) \\ 
+   \hline
+ & 6 & 2007.5 & 2008 Pakistan Demographic Survey (Others Direct) \\ 
+   \hline
+Palau & 28 & 2005.5 &  \\ 
+   \hline
+ & 28 & 2005.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Panama & 10 & 1972.5 &  \\ 
+   \hline
+ & 10 & 1972.5 & 1975-1976 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+Papua New Guinea &  &  &  \\ 
+   \hline
+Paraguay & 24 & 1999.5 &  \\ 
+   \hline
+ & 11 & 1976.5 & 1979 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1987.5 & 1990 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 2 & 1999.5 & 2004 RHS-CDC (Others Direct) \\ 
+   \hline
+Peru & 67 & 2000.5 &  \\ 
+   \hline
+ & 11 & 1975 & 1977-1978 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1983.5 & 1986 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1988.5 & 1991-1992 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 12 & 1994.5 & 1996 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1997.5 & 2000 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2000.5 & 2004-2008 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Philippines & 55 & 2005.5 &  \\ 
+   \hline
+ & 11 & 1975.5 & 1978 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1990.5 & 1993 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1995.5 & 1998 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2000.5 & 2003 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2005.5 & 2008 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Poland & 106 & 2011.5 &  \\ 
+   \hline
+ & 106 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Portugal & 114 & 2011.5 &  \\ 
+   \hline
+ & 114 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Qatar & 40 & 2010.5 &  \\ 
+   \hline
+ & 40 & 2010.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Romania & 82 & 2010.5 &  \\ 
+   \hline
+ & 82 & 2010.5 & 2013 WHO Good VR 2013 adjusted version by increasing 20 percent (VR) \\ 
+   \hline
+Russian Federation & 62 & 2010.5 &  \\ 
+   \hline
+ & 62 & 2010.5 & 2013 WHO VR 2013 adjusted version by increasing 20 percent (VR) \\ 
+   \hline
+Rwanda & 76 & 2007.5 &  \\ 
+   \hline
+ & 11 & 1981 & 1983 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 5 & 1988.1 & 1991 Census (Census Indirect) \\ 
+   \hline
+ & 11 & 1989.5 & 1992 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 12 & 1998.5 & 2000 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1999 & 2002 Census (Census Indirect) \\ 
+   \hline
+ & 11 & 2003 & 2005 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 10 & 2004.5 & 2007-2008 Interim Demographic and Health Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 2007.5 & 2010 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Saint Kitts and Nevis & 60 & 2005.5 &  \\ 
+   \hline
+ & 60 & 2005.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Saint Lucia & 71 & 2006.5 &  \\ 
+   \hline
+ & 71 & 2006.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Samoa & 6 & 2011.4 &  \\ 
+   \hline
+ & 2 & 1999 & 1999 Demographic and Health Survey (Other DHS Indirect) \\ 
+   \hline
+ & 2 & 1995 & 2000 Demographic and Vital Statistics Survey (Others Indirect) \\ 
+   \hline
+ & 2 & 2011.4 & 2011 Population and Housing Census (Census Direct) \\ 
+   \hline
+San Marino & 15 & 2003.5 &  \\ 
+   \hline
+ & 15 & 2003.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Sao Tome and Principe & 16 & 2005.5 &  \\ 
+   \hline
+ & 5 & 1995.9 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 11 & 2005.5 & 2008-2009 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Saudi Arabia & 14 & 2009.5 &  \\ 
+   \hline
+ & 4 & 1985 & 1987 Child Health Survey (Others Indirect) \\ 
+   \hline
+ & 2 & 1998.6 & 1999 Demographic Survey (Others Direct) \\ 
+   \hline
+ & 2 & 1999.6 & 2000 Demographic Survey (Others Direct) \\ 
+   \hline
+ & 2 & 2004.2 & 2004 Census (Census Direct) \\ 
+   \hline
+ & 2 & 2006.6 & 2007 Demographic Survey (Others Direct) \\ 
+   \hline
+ & 2 & 2009.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Senegal & 92 & 2007.5 &  \\ 
+   \hline
+ & 11 & 1975.5 & 1978 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1983.5 & 1986 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1989.5 & 1992-1993 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1994.5 & 1997 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1997 & 1999 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2003 & 2005 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 2003 & 2006 Malaria Indicator Survey (Other DHS Indirect) \\ 
+   \hline
+ & 10 & 2005.5 & 2008-2009 Malaria Indicator Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 2007.5 & 2010-2011 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Serbia & 54 & 2011.5 &  \\ 
+   \hline
+ & 54 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Seychelles & 74 & 2011.5 &  \\ 
+   \hline
+ & 74 & 2011.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Sierra Leone & 25 & 2006.1 &  \\ 
+   \hline
+ & 5 & 1995.3 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 1996.9 & 2004 Census (Census Indirect) \\ 
+   \hline
+ & 5 & 2001 & 2005-2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2001 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2006.1 & 2010 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Singapore & 114 & 2011.5 &  \\ 
+   \hline
+ & 114 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Slovakia & 60 & 2011.5 &  \\ 
+   \hline
+ & 60 & 2011.5 & 2013 WHO Good VR 2013 adjusted version by increasing 20 percent (VR) \\ 
+   \hline
+Slovenia & 60 & 2011.5 &  \\ 
+   \hline
+ & 60 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Solomon Islands &  &  &  \\ 
+   \hline
+Somalia & 11 & 2004 &  \\ 
+   \hline
+ & 1 & 1999.1 & 1999 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 10 & 2004 & 2006 Multiple Indicator Cluster Survey (MICS Direct) \\ 
+   \hline
+South Africa & 11 & 2006.7 &  \\ 
+   \hline
+ & 10 & 1995.5 & 1998 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 1 & 2006.7 & 2007 Community Survey (Others Direct) \\ 
+   \hline
+South Sudan &  &  &  \\ 
+   \hline
+Spain & 122 & 2011.5 &  \\ 
+   \hline
+ & 122 & 2011.5 & 2013 WHO Good VR 2013 adjusted version by increasing 20 percent (VR) \\ 
+   \hline
+Sri Lanka & 69 & 2007.5 &  \\ 
+   \hline
+ & 10 & 1972.5 & 1975 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1984.5 & 1987 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 48 & 2007.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+State of Palestine & 28 & 2008.1 &  \\ 
+   \hline
+ & 2 & 1992.5 & 1995 Demographic Survey (Others Direct) \\ 
+   \hline
+ & 2 & 1997.5 & 2000 Health Survey (Others Direct) \\ 
+   \hline
+ & 12 & 2005 & 2006 PAPFAM Family Health Survey (Others Direct) \\ 
+   \hline
+ & 10 & 2008.1 & 2010 Multiple Indicator Cluster Survey-Family Health Survey (MICS Direct) \\ 
+   \hline
+ & 2 & 2008 & 2011 Palestinian Family Survey (Others Direct) \\ 
+   \hline
+Saint Vincent and the Grenadines & 68 & 2009.5 &  \\ 
+   \hline
+ & 68 & 2009.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Sudan & 38 & 2007.5 &  \\ 
+   \hline
+ & 10 & 1975.5 & 1978-1979 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1986.5 & 1989-1990 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1986.5 & 1990 Demographic and Health Survey (DHS Indirect) \\ 
+   \hline
+ & 2 & 1995 & 1999 Safe Motherhood Survey (Others Direct) \\ 
+   \hline
+ & 10 & 2007.5 & 2010 Sudan Household Health Survey (MICS Direct) \\ 
+   \hline
+Suriname & 10 & 2002 &  \\ 
+   \hline
+ & 5 & 1995.2 & 1999-2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2002 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Swaziland & 28 & 2007.5 &  \\ 
+   \hline
+ & 5 & 1995.9 & 1999-2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 11 & 2003.5 & 2006-2007 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 12 & 2007.5 & 2010 Multiple Indicator Cluster Survey (MICS Direct) \\ 
+   \hline
+Sweden & 122 & 2011.5 &  \\ 
+   \hline
+ & 122 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Switzerland & 122 & 2011.5 &  \\ 
+   \hline
+ & 122 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Syria & 33 & 2002.7 &  \\ 
+   \hline
+ & 11 & 1976 & 1978 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 5 & 1986.6 & 1990 EPI/CDD and Child Mortality Survey (Others Indirect) \\ 
+   \hline
+ & 12 & 1999 & 2001 PAPFAM Family Health Survey (Others Direct) \\ 
+   \hline
+ & 5 & 2002.7 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Tajikistan & 10 & 2002.5 &  \\ 
+   \hline
+ & 5 & 1996.7 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2002.5 & 2005 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Tanzania & 65 & 2006.5 &  \\ 
+   \hline
+ & 5 & 1984.2 & 1988 Census (Census Indirect) \\ 
+   \hline
+ & 11 & 1988.5 & 1991-1992 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1994 & 1996 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1996.5 & 1999 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1998 & 2002 Census (Census Indirect) \\ 
+   \hline
+ & 11 & 2001.5 & 2004-2005 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2006.5 & 2009-2010 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Thailand & 38 & 2001.5 &  \\ 
+   \hline
+ & 2 & 1975 & 1974-1975 Survey of Population Change (Others Direct) \\ 
+   \hline
+ & 10 & 1972.5 & 1975 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 2 & 1985 & 1985-1986 Survey of Population Change (Others Direct) \\ 
+   \hline
+ & 11 & 1984.5 & 1987 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 4 & 1991 & 1989 Survey of Population Change (Others Direct) \\ 
+   \hline
+ & 9 & 2001.5 & 2005-2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Timor Leste & 13 & 2006.5 &  \\ 
+   \hline
+ & 1 & 1999.6 & 2002 Multiple Indicator Cluster Survey (Others Indirect) \\ 
+   \hline
+ & 2 & 1999 & 2003 Demographic and Health Survey (Other DHS Direct) \\ 
+   \hline
+ & 10 & 2006.5 & 2009-2010 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Togo & 32 & 2006.8 &  \\ 
+   \hline
+ & 11 & 1985.5 & 1988 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1996 & 1998 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 2002.3 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2006.8 & 2010 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Tonga &  &  &  \\ 
+   \hline
+Trinidad and Tobago & 31 & 2002.4 &  \\ 
+   \hline
+ & 10 & 1974.5 & 1977 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 1984.5 & 1987 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 5 & 1996.4 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2002.4 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Tunisia & 32 & 2009.6 &  \\ 
+   \hline
+ & 10 & 1985.5 & 1988 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 10 & 1992.4 & 1994 PAPCHILD Maternal and Child Health Survey (Others Direct) \\ 
+   \hline
+ & 10 & 1999 & 2001 PAPFAM Family Health Survey (Others Direct) \\ 
+   \hline
+ & 2 & 2009.6 & 2011-2012 Multiple Indicator Cluster Survey (MICS Direct) \\ 
+   \hline
+Turkey & 39 & 2003.8 &  \\ 
+   \hline
+ & 10 & 1975.5 & 1978 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 5 & 1985.8 & 1989 Demographic Survey (Others Indirect) \\ 
+   \hline
+ & 11 & 1990.5 & 1993 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1995.5 & 1998 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 2 & 2003.8 & 2008 Demographic and Health Survey (Other DHS Direct) \\ 
+   \hline
+Turkmenistan & 5 & 2002.4 &  \\ 
+   \hline
+ & 5 & 2002.4 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Tuvalu & 26 & 2005.5 &  \\ 
+   \hline
+ & 2 & 2000.3 & 2002 Census (Census Direct) \\ 
+   \hline
+ & 2 & 2002.7 & 2007 Demographic and Health Survey (Other DHS Direct) \\ 
+   \hline
+ & 22 & 2005.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Uganda & 65 & 2008.5 &  \\ 
+   \hline
+ & 11 & 1985.5 & 1988-1989 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1992.5 & 1995 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1998 & 2000-2001 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2004 & 2006 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 10 & 2007.5 & 2009 Malaria Indicator Survey (Other DHS Direct) \\ 
+   \hline
+ & 11 & 2008.5 & 2011 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Ukraine & 80 & 2011.5 &  \\ 
+   \hline
+ & 2 & 1995 & 1999 Reproductive Health Survey (Others Direct) \\ 
+   \hline
+ & 5 & 2002.9 & 2005 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 11 & 2004.5 & 2007 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 62 & 2011.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+United Arab Emirates & 7 & 1991 &  \\ 
+   \hline
+ & 5 & 1987 & 1987 chs (Others Indirect) \\ 
+   \hline
+ & 2 & 1991 & 1995 Family Health Survey (Others Direct) \\ 
+   \hline
+United Kingdom & 124 & 2011.5 &  \\ 
+   \hline
+ & 124 & 2011.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+United States of America & 118 & 2008.5 &  \\ 
+   \hline
+ & 118 & 2008.5 & 2013 WHO Good Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Uruguay & 100 & 2009.5 &  \\ 
+   \hline
+ & 100 & 2009.5 & 2013 WHO Vital Registration Data 2013 version (VR) \\ 
+   \hline
+Uzbekistan & 10 & 2003.1 &  \\ 
+   \hline
+ & 5 & 1996.9 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 5 & 2003.1 & 2006 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Vanuatu & 5 & 2003.2 &  \\ 
+   \hline
+ & 5 & 2003.2 & 2007-2008 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+Venezuela (Bolivarian Republic of) & 12 & 1995.5 &  \\ 
+   \hline
+ & 10 & 1974.5 & 1977 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 2 & 1995.5 & 1998 Encuesta Nacional de Poblacion y Familia (Others Direct) \\ 
+   \hline
+Vietnam & 37 & 1999.5 &  \\ 
+   \hline
+ & 5 & 1985.5 & 1988 National Demographic and Health Survey (Other DHS Direct) \\ 
+   \hline
+ & 2 & 1988.5 & 1994 Intercensal Demographic Survey (Others Direct) \\ 
+   \hline
+ & 11 & 1994.5 & 1997 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 3 & 1993.4 & 1998 Vietnam Longitudinal Survey (VLSS) (Others Direct) \\ 
+   \hline
+ & 5 & 1997 & 2000 Multiple Indicator Cluster Survey (MICS Indirect) \\ 
+   \hline
+ & 11 & 1999.5 & 2002 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+Yemen & 48 & 2003.5 &  \\ 
+   \hline
+ & 8 & 1977 & 1979 World Fertility Survey (Other DHS Direct) \\ 
+   \hline
+ & 12 & 1989.5 & 1991-1992 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 14 & 1996 & 1997 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 2 & 1997 & 2003 PAPFAM Family Health Survey (Others Direct) \\ 
+   \hline
+ & 12 & 2003.5 & 2006 Multiple Indicator Cluster Survey (MICS Direct) \\ 
+   \hline
+Zambia & 46 & 2010.3 &  \\ 
+   \hline
+ & 11 & 1990 & 1992 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1994.5 & 1996-1997 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1999.5 & 2001-2002 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 2004.5 & 2007 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 2 & 2010.3 & 2010 Census (Census Direct) \\ 
+   \hline
+Zimbabwe & 59 & 2007.5 &  \\ 
+   \hline
+ & 1 & 1985.6 & 1987 Inter-censal Demographic Survey (Others Indirect) \\ 
+   \hline
+ & 11 & 1985.5 & 1988-1989 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 11 & 1991.5 & 1994 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 2 & 1997 & 1997 Inter-censal Demographic Survey (Others Indirect) \\ 
+   \hline
+ & 11 & 1996.5 & 1999 Demographic and Health Survey (DHS Direct) \\ 
+   \hline
+ & 12 & 2006.5 & 2009 Multiple Indicator Cluster Survey (MICS Direct) \\ 
+   \hline
+ & 11 & 2007.5 & 2010-2011 Demographic and Health Survey (DHS Direct) \\ 
+  \hline
+\caption{\bf{Overview of data sources used by country} \textmd{For each country, the total number of observation and the most recent observation year are shown after the country name.}} 
+\label{tb-sup-datasource}
+\end{longtable}
+}
+
+> # paste column names and info after \begin{longtable}
+> # \hline
+> #  Country &  Number of obs &  Most recent obs year &  Source (source type) \\
+>  .... [TRUNCATED] 

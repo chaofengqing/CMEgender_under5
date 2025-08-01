@@ -1,0 +1,46 @@
+
+## How to get standard errors for observed sex ratio on log-scale, i.e. log(s.i)
+###----------------------------------------------------------------
+#summary(SEnoimpute.i)
+# note: with data model on log-scale, impute based on log(si)'s
+# SE.i         <- ifelse(is.na(SEnoimpute.i), SEImpute, SEnoimpute.i) 
+#code to get 0.15 is commented out and is assigned directly in source_BasicSetup.R
+
+## log-scale of s.i and SE.i ##
+logs.i  <- log(s.i)
+# with delta method:var = 1/s.i^2*SE.i^2
+logSEnoimpute.i <- 1 / s.i * SEnoimpute.i
+
+#summary(logSEnoimpute.i)
+#summary(logSEnoimpute.i[source.i!=S])
+logSE.i <- ifelse(is.na(logSEnoimpute.i), logSEImpute, logSEnoimpute.i) 
+#summary(logSE.i)
+
+# note: SE.i  does not exist anymore.
+# previously, SE.i contains imputed 0.15. Now we model on the log-scale of s.i
+# Hence, only need to keep the none-imputed SE for s.i, i.e. SEnoimpute.i
+# then impute SE for log(s.i) by substituting logSEImpute to missing entries.
+# we plot out the SEnoimpute.i in the country plots.
+
+# # impute logSEImpute when logSEnoimpute.i is missing
+# # analyze
+# median(logSEnoimpute.i[agecat.i==1 & typename.i!="VR"], na.rm=TRUE)
+# median(logSEnoimpute.i[agecat.i==4 & typename.i!="VR"], na.rm=TRUE)
+# median(logSEnoimpute.i[agecat.i==5 & typename.i!="VR"], na.rm=TRUE)
+# 
+# median(SEnoimpute.i[agecat.i==4 & typename.i=="VR"], na.rm=TRUE)
+# min(SEnoimpute.i[agecat.i==4 & typename.i=="VR"], na.rm=TRUE)
+# summary(SEnoimpute.i[agecat.i==4 & typename.i=="VR"])
+# sum(agecat.i==5 & typename.i!="VR")
+# 
+## median(SE.i[agecat.i==1 & typename.i=="DHS Direct"], na.rm=TRUE)
+## median(SE.i[agecat.i==4 & typename.i=="DHS Direct"], na.rm=TRUE)
+## 
+## mean(SE.i[agecat.i==1 & typename.i=="DHS Direct"], na.rm=TRUE)
+## plot(SE.i[agecat.i==1 & typename.i=="DHS Direct"]~Q1.i[agecat.i==1 
+## & typename.i=="DHS Direct"], ylim = c(0,1))
+## mean(SE.i[agecat.i==4 & typename.i=="DHS Direct"], na.rm=TRUE)
+## 
+## median(SE.i[agecat.i==5 & typename.i=="MICS Indirect"], na.rm=TRUE)
+###----------------------------------------------------------------
+
