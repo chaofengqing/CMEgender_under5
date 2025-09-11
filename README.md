@@ -11,14 +11,14 @@ This repository presents country-specific mortality sex ratios for infants, chil
 The repository contains two parts: **code** and **data**. 
 
 * Run the master R code files to get all the results. Specifically,
-    - /code/main_.R: run this to get the Markov chain Monte Carlo (MCMC) posterior samples of the Bayesian hierarchical model parameters; and
-    - /code/main-output.R: after finish running the master code above, run this master code to get all the related output files and plots.
+    - /code/main48_1,2,3,4.R: run this to get the Markov chain Monte Carlo (MCMC) posterior samples of the Bayesian hierarchical model parameters; and
+    - /code/main48_output.R: after finish running the master code above, run this master code to get all the related output files and plots.
 * Input data for the model:
     - /data/input/: data files related to country information, covariates, parameter priors;
-    - /data/interim/database_for_modeling_2021-02-10.csv: database of regional-level SRB observations from Vietnam.
+    - /data/interim/databset2013_fullyclean_2014-05-23.csv: database of regional-level SRB observations from Vietnam.
         - 526 observations with reference years ranging from 1972 to 2019.
         - This database is based on over 2.9 million birth records from censuses and nationally representative surveys in Vietnam.
-        - Refer to the [published paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0253721) for details on data source and preprocessing.
+        - Refer to the [published paper](https://www.sciencedirect.com/science/article/pii/S2214109X14702803?via%3Dihub) for details on data source and preprocessing.
 
 
 
