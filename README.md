@@ -15,16 +15,14 @@ The repository contains two parts: **code** and **data**.
     - /code/main48_output.R: after finish running the master code above, run this master code to get all the related output files and plots.
 * Input data for the model:
     - /data/input/: data files related to country information, covariates, parameter priors;
-    - /data/interim/databset2013_fullyclean_2014-05-23.csv: database of regional-level SRB observations from Vietnam.
-        - 526 observations with reference years ranging from 1972 to 2019.
-        - This database is based on over 2.9 million birth records from censuses and nationally representative surveys in Vietnam.
-        - Refer to the [published paper](https://www.sciencedirect.com/science/article/pii/S2214109X14702803?via%3Dihub) for details on data source and preprocessing.
-
+    - /data/interim/databset2013_fullyclean_2014-05-23.csv: database of Child Mortality Rate(CMR), Infant Mortality Rate(IMR) and Under 5 Mortality Rate(U5MR) from all countries.
+        - This database is based on millions birth records from censuses and nationally representative surveys from all over the world.
+        - Refer to the [supplementary appendix](https://www.thelancet.com/cms/10.1016/S2214-109X%2814%2970280-3/attachment/f8888b19-ce87-4f68-8eba-8ccb90976b8f/mmc1.pdf) for details on data source and preprocessing.
 
 
 ## Research Context
 
-This project presents a subnational estimation and projection of Vietnam’s Sex Ratio at Birth (SRB) from 1980 to 2050, based on a Bayesian hierarchical time series mixture model. While previous studies have examined SRB at the national level, our approach addresses the geographic heterogeneity of sex imbalances in Vietnam—a country where regional variation is both significant and policy-relevant. The model draws on a comprehensive compilation of survey and census data, spanning four decades, and statistically reconciles inconsistencies across data sources through a robust probabilistic framework.
+This project presents a national estimation and projection of country-specific mortality sex ratios from 1990 to 2012, based on a Bayesian hierarchical time series mixture model. The estimation of mortality by sex and identification of countries with outlying levels is challenging because of issues with data availability and quality, and because sex ratios might vary naturally based on differences in mortality levels and associated cause of death distributions. 
 
 <!-- Our results highlight the distinct spatial dynamics of sex selection, showing elevated SRBs in the northern regions such as the Red River Delta, while SRBs remain close to natural levels in the southern provinces. We identify the onset, stabilization, and projected turnaround phases of SRB transitions, linking these temporal patterns to demographic, cultural, and policy factors. In doing so, we contribute the first set of regional-level SRB projections for Vietnam and provide an open-source framework for reproducible, fine-grained demographic modeling in contexts of gender bias.
 
@@ -33,7 +31,7 @@ We release the full model specification, data harmonization pipeline, and script
 
 ## Methodology
 
-The study estimates Vietnam's SRBs by subnational region from 1980 to 2019 and projects them until 2050 using a Bayesian hierarchical time series mixture model. This model incorporates uncertainties from observations and natural year-by-year fluctuations. The full model write ups are in the [published paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0253721).
+The study estimates country-specific mortality sex ratios for infants, children aged 1–4 years, and children under the age of 5 years (under 5s) for all countries , The full model write ups are in the [supplementary appendix](https://www.thelancet.com/cms/10.1016/S2214-109X%2814%2970280-3/attachment/f8888b19-ce87-4f68-8eba-8ccb90976b8f/mmc1.pdf).
 
 We used the JAGS (Just Another Gibbs Sampler) to do Bayesian inference. The relevant R code to call JAGS and to get the MCMC samples are (they are called automatically in /code/main.R):
 * /code/jags_setupMCMC.R: prior settings, MCMC settings
