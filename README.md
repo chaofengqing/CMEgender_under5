@@ -1,17 +1,17 @@
-# 
+# National, regional, and global sex ratios of infant, child, and under-5 mortality and identification of countries with outlying ratios: a systematic assessment
 
-This repository presents the first subnational study of Sex Ratio at Birth (SRB) trends and projections in Vietnam from 1980 to 2050. We adopt a **Bayesian hierarchical time-series mixture model** to estimate and forecast SRB across six macro-regions of Vietnam. The model leverages an extensive database compiled from all available censuses and nationally representative surveys. 
+This repository presents country-specific mortality sex ratios for infants, children aged 1–4 years, and children under the age of 5 years (under 5s) for all countries from 1990 to 2012 using the Bayesian hierarchical model. 
 
-**Please refer to the [published paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0253721) regarding to this repository for details on the research background/context, model implementation, data sources, and policy implications**:
+**Please refer to the [published paper](https://www.sciencedirect.com/science/article/pii/S2214109X14702803?via%3Dihub) regarding to this repository for details on the research background/context, model implementation, data sources, and policy implications**:
 
-* Main paper: Chao, Fengqing, Christophe Z. Guilmoto, and Hernando Ombao. "Sex ratio at birth in Vietnam among six subnational regions during 1980–2050, estimation and probabilistic projection using a Bayesian hierarchical time series model with 2.9 million birth records". _PLoS ONE_ 16, no. 7 (2021): e0253721.
-* Technical appendix of the main paper: Chao, Fengqing, Christophe Z. Guilmoto, and Hernando Ombao. 2021. "S1 Appendix Sex ratio at birth in Vietnam among six subnational regions during 1990–2050, estimation and probabilistic projection using a Bayesian hierarchical time series model". _figshare_. doi:[10.6084/m9.figshare.14152979](https://doi.org/10.6084/m9.figshare.14152979).
+* Main paper: Leontine Alkema, Fengqing Chao, Danzhen You, Jon Pedersen, Cheryl C. Sawyer (2014). National, regional, and global sex ratios of infant, child, and under-5 mortality and identification of countries with outlying ratios: a systematic assessment. The Lancet Global Health, 2(9) e521–e530.
+* Technical appendix of the main paper: Leontine Alkema, Fengqing Chao, Danzhen You, Jon Pedersen, Cheryl C. Sawyer (2014). Supplementary appendix: National, regional, and global sex ratios of infant, child, and under-5 mortality and identification of countries with outlying ratios: a systematic assessment.
 
 ## Repository Structure
 The repository contains two parts: **code** and **data**. 
 
 * Run the master R code files to get all the results. Specifically,
-    - /code/main.R: run this to get the Markov chain Monte Carlo (MCMC) posterior samples of the Bayesian hierarchical model parameters; and
+    - /code/main_.R: run this to get the Markov chain Monte Carlo (MCMC) posterior samples of the Bayesian hierarchical model parameters; and
     - /code/main-output.R: after finish running the master code above, run this master code to get all the related output files and plots.
 * Input data for the model:
     - /data/input/: data files related to country information, covariates, parameter priors;
