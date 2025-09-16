@@ -13,9 +13,9 @@ The repository contains two parts: **code** and **data**.
 * Run the master R code files to get all the results. Specifically,
     - /code/main48_1,2,3,4.R: run this to get the Markov chain Monte Carlo (MCMC) posterior samples of the Bayesian hierarchical model parameters; and
     - /code/main48_output.R: after finish running the master code above, run this master code to get all the related output files and plots.
-* Input data for the model:
+* Input data for the model: 
     - /data/input/: data files related to country information, covariates, parameter priors;
-    - /data/output/M49/rmvCountry.rda：data files related to removing countries;due to the size of the file, if you need this file please contact to the corresponding author.
+    - /CMEgender/data/qtotal_trajectories/U5MRandIMRtrajectories.L_20130813.rda: data files related to trajectories;due to the size of the file, if you need this file please contact to the corresponding author.
     - /data/interim/databset2013_fullyclean_2014-05-23.csv: database of Child Mortality Rate(CMR), Infant Mortality Rate(IMR) and Under 5 Mortality Rate(U5MR) from all countries.
         - This database is based on millions birth records from censuses and nationally representative surveys from all over the world.
         - Refer to the [supplementary appendix](https://www.thelancet.com/cms/10.1016/S2214-109X%2814%2970280-3/attachment/f8888b19-ce87-4f68-8eba-8ccb90976b8f/mmc1.pdf) for details on data source and preprocessing.
